@@ -3,7 +3,7 @@
 .vs/
 .idea/
 
-# Build
+# Build artifacts
 bin/
 obj/
 TestResults/
@@ -15,16 +15,15 @@ TestResults/
 logs/
 *.log
 
+# EF Core migrations snapshots (если хочешь оставить только init)
+# [Mм]igrations/
+
 # Publish profiles и локальные настройки
 **/Properties/PublishProfiles/
 **/*.csproj.user
 
-# Секреты/локальные конфиги
+# Local configs / secrets
 **/appsettings.Development.json
 **/appsettings.Local.json
 **/*.secrets.json
 .env
-
-# Front (на будущее)
-node_modules/
-dist/
