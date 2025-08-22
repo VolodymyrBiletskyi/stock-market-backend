@@ -1,0 +1,30 @@
+# IDE
+.vscode/
+.vs/
+.idea/
+
+# Build
+bin/
+obj/
+TestResults/
+*.cache/
+*.user
+*.rsuser
+
+# Logs
+logs/
+*.log
+
+# Publish profiles и локальные настройки
+**/Properties/PublishProfiles/
+**/*.csproj.user
+
+# Секреты/локальные конфиги
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/*.secrets.json
+.env
+
+# Front (на будущее)
+node_modules/
+dist/
