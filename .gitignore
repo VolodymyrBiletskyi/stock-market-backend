@@ -15,14 +15,11 @@ TestResults/
 logs/
 *.log
 
-# EF Core migrations snapshots (если хочешь оставить только init)
-# [Mм]igrations/
-
-# Publish profiles и локальные настройки
+# Publish profiles 
 **/Properties/PublishProfiles/
 **/*.csproj.user
 
-# Local configs / secrets
+# Local configs 
 **/appsettings.Development.json
 **/appsettings.Local.json
 **/*.secrets.json
