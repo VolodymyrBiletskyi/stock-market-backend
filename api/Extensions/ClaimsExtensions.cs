@@ -11,7 +11,16 @@ namespace api.Extensions
     {
         public static string GetUsername(this ClaimsPrincipal user)
         {
-            return user.Claims.SingleOrDefault(x => x.Type.Equals("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname")).Value;
+            if (user is null) return null;
+            
+            return user.Identity?.Name
+            ?? user.FindFirstValue(ClaimTypes.Name)
+            ?? user.FindFirstValue("preferred_username")
+            ?? user.FindFirstValue(ClaimTypes.GivenName)
+            ?? user.FindFirstValue(ClaimTypes.Email)
+            ?? user.FindFirstValue(JwtRegisteredClaimNames.UniqueName) 
+            ?? user.FindFirstValue(JwtRegisteredClaimNames.Name)                    
+            ?? user.FindFirstValue(ClaimTypes.NameIdentifier);
         }
     }
 }
