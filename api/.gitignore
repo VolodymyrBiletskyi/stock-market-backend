@@ -1,29 +1,17 @@
-# IDE
-.vscode/
-.vs/
-.idea/
-
 # Build artifacts
-bin/
-obj/
-TestResults/
-*.cache/
-*.user
-*.rsuser
+api/bin/
+api/obj/
+
+# VS Code
+.vscode/
 
 # Logs
-logs/
 *.log
 
-# EF Core migrations snapshots (если хочешь оставить только init)
-# [Mм]igrations/
+# User-specific files
+*.user
+*.suo
 
-# Publish profiles и локальные настройки
-**/Properties/PublishProfiles/
-**/*.csproj.user
-
-# Local configs / secrets
-**/appsettings.Development.json
-**/appsettings.Local.json
-**/*.secrets.json
-.env
+# Local config (секреты)
+appsettings.Development.json
+appsettings.Local.json
